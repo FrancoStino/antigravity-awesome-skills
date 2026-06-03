@@ -12,6 +12,9 @@ Deploy any project to Vercel. **Always deploy as preview** (not production) unle
 
 The goal is to get the user into the best long-term setup: their project linked to Vercel with git-push deploys. Every method below tries to move the user closer to that state.
 
+## When to Use
+- Use this skill when the task matches this description: Deploy applications and websites to Vercel. Use when the user requests deployment actions like "deploy my app", "deploy and give me the link", "push this live", or "create a preview deployment".
+
 ## Step 1: Gather Project State
 
 Run all four checks before deciding which method to use:
@@ -294,3 +297,8 @@ the command with escalated permissions — want me to proceed?
 ### CLI Auth Failure
 
 If `vercel login` or `vercel deploy` fails with authentication errors, fall back to the no-auth deploy script (claude.ai or Codex variant, depending on the environment).
+
+## Limitations
+- Use this skill only when the task clearly matches the scope described above.
+- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
+- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

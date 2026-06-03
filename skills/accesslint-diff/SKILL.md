@@ -12,6 +12,9 @@ Report only what changed. Locate; don't fix. If no URL in `$ARGUMENTS`, ask for 
 
 Parse `$ARGUMENTS`: strip `--branch <name>` if present → branch mode. If `--branch` has no value, use the default branch above. Remainder is the URL.
 
+## When to Use
+- Use this skill when the task matches this description: Diff a live page's accessibility violations against a baseline — by default compares uncommitted changes (stash-based), or pass --branch [<name>] to diff against a branch. Reports only new violations introduced, violations fixed, and pre-existing count. Use `scan` for a full audit with no diffing.
+
 ## 1. Audit
 
 ```bash
@@ -71,3 +74,8 @@ npx -y @accesslint/chrome@latest stop --all  # skip if ensure reported "managed"
 - Stash mode: `sleep 2` covers most HMR cases; if baseline looks identical to current, add `--wait-for "<selector>"`.
 - Branch mode: no HMR — CLI opens a fresh tab each run. `--wait-for` is the rebuild gate.
 - Heavy DOM changes between runs cause selector drift — re-run with `accesslint:scan` for the full picture.
+
+## Limitations
+- Use this skill only when the task clearly matches the scope described above.
+- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
+- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

@@ -1,12 +1,15 @@
 ---
 name: accesslint-scan
-description: "Audit a live page for accessibility issues and locate each violation precisely — optionally pass a URL (e.g. `accesslint:scan https://example.com/dashboard`), otherwise ask for one. Ensures a debuggable Chrome, runs the @accesslint/core engine via CDP, and returns a worklist of live-DOM WCAG violations grounded to each violation's DOM selector and source file:line. Locates; doesn't edit — output drives fixes by Claude. Use it for \'is this page accessible\', or to verify a UI change. For diffing against uncommitted changes or a branch, use the `diff` skill."
+description: "Audit a live page for accessibility issues, locate each WCAG violation precisely, and return a selector-grounded fix worklist without editing."
 risk: safe
 source: "https://github.com/AccessLint/skills"
 date_added: "2026-06-02"
 ---
 
 Audit a live page and report what's broken and where. Locate; don't fix. If no URL in `$ARGUMENTS`, ask for one.
+
+## When to Use
+- Use this skill when the task matches this description: Audit a live page for accessibility issues, locate each WCAG violation precisely, and return a selector-grounded fix worklist without editing.
 
 ## 1. Audit
 
@@ -37,3 +40,8 @@ npx -y @accesslint/chrome@latest stop --all  # skip if ensure reported "managed"
 
 - `ensure` always determines the port — never hardcode 9222.
 - CLI exit 2 = bad URL or page never loaded; check the dev server.
+
+## Limitations
+- Use this skill only when the task clearly matches the scope described above.
+- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
+- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.
