@@ -3,12 +3,21 @@ name: skill-suggester
 version: 1.0.0
 description: "Scan prompt history for recurring patterns and unmet needs, then propose new skills or command templates"
 risk: safe
+source: community
+source_type: community
+source_repo: mskadu/opencode-agent-skills
 license: MIT
+license_source: "https://github.com/mskadu/opencode-agent-skills"
+date_added: "2026-06-05"
 ---
 
 ## What I do
 
 Reads your opencode prompt history, finds repeated multi-step workflows, and recommends skill-worthy candidates. Saves you from having the same conversation twice.
+
+## When to Use
+
+Use this skill when the user wants to mine opencode prompt history for repeated workflows, recurring unmet needs, or candidates for new reusable skills.
 
 ## How to invoke
 
@@ -53,3 +62,8 @@ Run `/skill skill-suggester` to scan the full history. Optionally pass `--since 
 - Rate each candidate: `high` (clear ROI, use weekly), `medium` (nice to have), `low` (rare but worth noting).
 - If nothing qualifies, say so and explain why.
 - After presenting candidates, ask if you want to create any of them.
+
+## Limitations
+
+- Prompt history can contain sensitive local context; summarize patterns without exposing unnecessary private excerpts.
+- Recommendations are suggestions only and still need human review before creating or publishing a new skill.

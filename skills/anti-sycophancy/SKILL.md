@@ -3,9 +3,18 @@ name: anti-sycophancy
 version: 2.0.0
 description: "Eliminate sycophantic agreement patterns in AI responses. Load via /skill anti-sycophancy."
 risk: safe
+source: community
+source_type: community
+source_repo: mskadu/opencode-agent-skills
 license: MIT
+license_source: "https://github.com/mskadu/opencode-agent-skills"
 compatibility: opencode
+date_added: "2026-06-05"
 ---
+
+## When to Use
+
+Use this skill when an AI coding assistant needs to challenge user claims independently, avoid agreement bias, and state evidence before deference.
 
 ## Process
 
@@ -24,3 +33,8 @@ c) If repeated opinion → restate your position with the evidence
 ## References
 
 Full bibliography in README.md.
+
+## Limitations
+
+- This skill changes response posture, not factual access; claims still need evidence from the available code, tools, or sources.
+- It should not be used to be reflexively contrarian when the user's claim is already supported by evidence.

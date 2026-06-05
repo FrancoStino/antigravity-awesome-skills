@@ -3,7 +3,12 @@ name: smart-git-automation
 version: 1.0.0
 description: "Smart change detection, auto branch naming, and streamlined commit/PR workflow"
 risk: critical
+source: community
+source_type: community
+source_repo: mskadu/opencode-agent-skills
 license: MIT
+license_source: "https://github.com/mskadu/opencode-agent-skills"
+date_added: "2026-06-05"
 ---
 
 ## What I do
@@ -11,7 +16,7 @@ license: MIT
 - Auto-generate descriptive branch names from changes
 - Streamlined workflow: scan → branch → commit → push → PR with fewer prompts
 
-## When to use me
+## When to Use
 Use this when you want a faster, smarter git workflow that groups changes logically and reduces manual confirmation overhead.
 
 ## Workflow Steps
@@ -84,3 +89,8 @@ Show the proposed branch name and ask for one-word confirmation (or type alterna
 - Check if GitHub repo exists before PR creation
 - Skip PR step if user says "no" at any point
 - If branch already exists with changes, offer to amend or add new commit
+
+## Limitations
+
+- Do not bypass repository-specific maintainer rules, branch policies, or required review gates.
+- Confirm destructive or publishing actions explicitly; this skill should streamline routine Git flow, not remove accountability.
