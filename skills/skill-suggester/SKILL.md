@@ -7,7 +7,7 @@ source: community
 source_type: community
 source_repo: mskadu/opencode-agent-skills
 license: MIT
-license_source: "https://github.com/mskadu/opencode-agent-skills"
+license_source: "https://github.com/mskadu/opencode-agent-skills/blob/main/LICENSE"
 date_added: "2026-06-05"
 ---
 
